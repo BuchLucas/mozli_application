@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ 
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="url_for('static',filename='/static/styles/style.css')"/>
+  <title>NetSFilm</title>
+  <style>
+ 
+body{
+    margin: 0px;
+    text-align: center;
+  }
+  
+  
+#mx{
+    background-color:#ffffff00;
+    color: red;
+}
+  
+  #ddd{
+    
+    background-color: #0007;
+      
+  }
+  .form{
+      background-color: #0011;
+      padding: 8%;
+      margin: 10%;
+      border-radius: 20px;
+  }
+  
+  .form p{
+      font-size: 12px;
+  }
+  
+  #formI{
+      
+      display: block;
+  }
+  #textoMain{
+    font-size: 30px;
+    text-align: center;
+    background-image: url("../image/bg1.jpg");
+    background-color: #77bddd;
+    background-size: cover;
+    color: white;
+  }
+  
+  .caixa{
+    width: 100%;
+    
+    height: 350px;
+    background-color: #77bddd;
+    margin: 10px;
+    display: flex;
+   
+    
+    
+  }
+  .caixa div{
+    width: 98%;
+    display:grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    padding:10px;
+  }
+  
+  .caixa div img{
+    width:60%;
+  }
+  #boxCab{
+    text-align: left;
+    margin:15px;
+    
+  }
+  
+  
+  .caixinha{
+    width: 100%;
+    height: 160px;
+    background-color: #0ad;
+    color: white;
+    margin-top: -25px;
+    background-image: url("../series/round6_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    
+    
+  }
+  #ch1{
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    margin: 20px;
+    
+  }
+  .subC{
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  #nameS{
+    color: red;
+    float: right;
+    padding-top: 1px;
+    font-size: 35px;
+  }
+  #img_menu{
+    height: 20px;
+    width:25px;
+    margin-left:3px;
+    
+  }
+  
+  .imgp{
+
+    width:10%;
+    height:330px;
+    text-align: center;
+    align-self: center;
+
+  }
+
+  .btnr{
+    background-color:rgb(48, 195, 214);
+    width: 150px;
+    height: 40px;
+    color: #f0eeee;
+  }
+
+  .btnr:hover{
+    width: 170px;
+    height: 50px;
+    background-color:tomato;
+  }
+  .and{
+    width: 100%;
+    position:absolute;
+    background-color: #11f0da55;
+    color: #a0ddf04;
+    
+
+  }
+  #caixa_suj{
+
+    width: 90%;
+    margin:50px;
+    text-align: center;
+
+  }
+  #text_suj{
+
+
+    font-size:30px;
+
+  }
+
+  .caixa_lista_li{
+
+    background-color: #77bddd;
+    margin: 5%;
+    border-radius:10px;
+
+  }
+  #drop_8{
+    display: none;
+  }
+  #drop_9{
+    display: none;
+  }
+  #drop_10{
+    display: none;
+  }
+
+  .img_lista_li{
+
+    width: 100px;
+    height: 150px;
+  }
+  .img_lista_li_drop{
+
+    width: 100px;
+    height: 90px;
+    margin-left: 20px;
+  }
+
+
+  .discipli{
+    float:left;
+    width: 140px;
+    margin: 7px;
+    
+
+  }
+  .caixa_drop_li{
+    
+    
+    background:#174580;
+    background-color: #aff804;
+    background-position: center;
+    background-image: url("../image/bg1.jpg");
+    color: red;
+  }
+  #drop_8{
+    display: none;
+  }
+  #drop_9{
+    display: none;
+  }
+  #drop_10{
+    display: none;
+  }
+
+  #pop_menu{
+    width: 250px;
+    margin: 10%;
+    border: 3px solid #174580;
+    text-align: center;
+    background: navy;
+    color: red;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    
+    
+    
+  }
+
+  #form1{
+    width: 50%;
+    margin: 10%;
+    border: 3px solid #174580;
+    text-align: center;
+    background: navy;
+    color: red;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    
+    
+    
+  }
+  #form2{
+    width: 50%;
+    margin: 10%;
+    border: 3px solid #174580;
+    text-align: center;
+    background: navy;
+    color: red;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    
+    
+    
+  }
+
+  #img_mv{
+    height: 40px;
+    width:50px;
+    
+  }
+  #img_vm{
+    height: 40px;
+    width:50px;
+    
+  }
+  .pform{
+    text-align: left;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  
+  input{
+    width: 80%;
+    height: 23px;
+    border-radius: 10px;
+    border: 2px solid green;
+    color: teal;
+    font-size: 17px;
+    
+  }
+  
+  button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  textarea{
+    width: 80%;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px solid green;
+    color: teal;
+    font-size: 18px;
+  }
+  #PFF{
+
+
+  }
+.pinfo{
+      
+      
+      color: #228080;
+      
+  }
+  .dinfo{
+      background-color: #dddd22;
+      border-radius: 7px;
+      color: #22aadd;
+      height: 100px;
+      display: {{atvCLInfo}};
+  }
+
+  
+  
+  </style>
+</head>
+<body>
+  <nav id="pop_menu">
+    <button onclick="close_pop_menu()" style="width:50px; font-size: 30px; color:red; background-color: yellow; float: right;" class="btnr">X</button>
+    <button class="btnr">Home</button>
+    <button class="btnr">Filmes</button>
+    <button class="btnr">Series</button>
+    <button class="btnr">Animes</button>
+    <button class="btnr">Pano de Acesso</button>
+    
+  </nav>
+
+
+<div class="caixinha" >
+        <br>
+    <h1 id="ddd"><mark id="mx">Moz</mark>SFilmes</h1>
+    <p>se ainda nao tens acesso inscreva se nessa plataforma
+        de baixo custo para baixar seus filmes series e animes.
+    </p>
+    
+    </div>
+  <form class="form" id="formI" action="/createClient" method="post">
+    <p class="pform">Nome: </p>
+    <input type="name" name="nome" required>
+    <p class="pform">Seu Email: </p>
+    <input type="email" name="email" required>
+    <p class="pform">Numero de Telefone: </p>
+    <input type="number" name="phoneClient" required></textarea><br>
+    
+    
+ <p class="pform">Criar Senha: </p>
+ 
+  <input type="password" name="password_"  required>
+<p class="pform">Confirmar a Senha: </p>
+ 
+  <input type="password" name="passconfirm" required><br>
+    <button type="submit">Inscrever-se</button>
+    <a href="{{url_for('login')}}"><p>Ja tenho o conta</p></a>
+        <div class="dinfo">
+        <br>
+        <p class="pinfo">{{infoCLog1}}</p></div>
+    
+    
+  </form>
+  
+  
+  
+  <hr>
+
+<video ></video>
+ 
+  <div class="and">
+
+    <p>Movie Application</p>
+    <p> <a href="#"></a> </p>
+    <p>Aos 22/01/2024 CHIMOIO MOZAMBIQUE</p>
+
+  </div>
+<script src="scripts/index.js">
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css"/>
+    <title>SF Movies</title>
+    <style>
+    
+    
+    
+    body{
+        margin: 0px;
+    }
+    
+    
+    
+    
+    
+    
+#textoMain{
+    font-size: 30px;
+    text-align: center;
+    background-image: url("../image/bg1.jpg");
+    background-color: #77bddd;
+    background-size: cover;
+    color: white;
+  }
+  
+  .caixa{
+    width: 100%;
+    
+    height: 350px;
+    background-color: #77bddd;
+    margin: 10px;
+    display: flex;
+   
+    
+    
+  }
+  .caixa div{
+    width: 98%;
+    display:grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    padding:10px;
+  }
+  
+  .caixa div img{
+    width:60%;
+  }
+  #boxCab{
+    text-align: left;
+    margin:15px;
+    
+  }
+  
+  
+  .caixinha{
+    width: 100%;
+    height: 160px;
+    background-color: #0ad;
+    color: white;
+    text-align: center;
+    margin-top: -25px;
+    background-image: url("{{url_for('static',filename='/series/round6_2.jpg')}}");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #ch1{
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    margin: 20px;
+    
+  }
+  .subC{
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  #nameS{
+    color: red;
+    float: right;
+    padding-top: 1px;
+    font-size: 35px;
+  }
+  #img_menu{
+    height: 20px;
+    width:25px;
+    margin-left:3px;
+    
+  }
+  
+  .imgp{
+
+    width:10%;
+    height:330px;
+    text-align: center;
+    align-self: center;
+
+  }
+
+  .btnr{
+    background-color:rgb(48, 195, 214);
+    width: 150px;
+    height: 40px;
+    color: #f0eeee;
+  }
+
+  .btnr:hover{
+    width: 170px;
+    height: 50px;
+    background-color:tomato;
+  }
+  .and{
+    width: 100%;
+    position:absolute;
+    background-color: darkcyan;
+    color: #aff804;
+    
+
+  }
+  #caixa_suj{
+
+    width: 90%;
+    margin:50px;
+    text-align: center;
+
+  }
+  #text_suj{
+
+
+    font-size:30px;
+
+  }
+
+  .caixa_lista_li{
+
+    background-color: #77bddd;
+    margin: 5%;
+    border-radius:10px;
+    padding: 10px;
+
+  }
+  #drop_8{
+    display: none;
+  }
+  #drop_9{
+    display: none;
+  }
+  #drop_10{
+    display: none;
+  }
+
+  .img_lista_li{
+
+    width: 260px;
+    height: 150px;
+  }
+  .img_lista_li_drop{
+
+    width: 100px;
+    height: 90px;
+    margin-left: 20px;
+  }
+
+
+  .discipli{
+    float:left;
+    width: 300px;
+    text-align: center;
+    margin: 7px;
+    background-color: #F0F8FF;
+    border-radius: 7px;
+    border: solid 4px #00005511;
+    
+
+  }
+  .caixa_drop_li{
+    
+    
+    background:#174580;
+    background-color: #aff804;
+    background-position: center;
+    background-image: url("../image/bg1.jpg");
+    color: red;
+  }
+  #drop_8{
+    display: none;
+  }
+  #drop_9{
+    display: none;
+  }
+  #drop_10{
+    display: none;
+  }
+
+  #pop_menu{
+    width: 250px;
+    margin: 10%;
+    border: 3px solid #174580;
+    text-align: center;
+    background: navy;
+    color: red;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    
+    
+    
+  }
+
+  #form1{
+    width: 280px;
+    margin: 10%;
+    
+    border: 3px solid #17458055;
+    text-align: center;
+    background: silver;
+    color: #222222;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    
+    
+    
+    
+  }
+  
+  #form p{
+      font-size: 10px;
+  }
+  #form2{
+    width: 50%;
+    margin: 10%;
+    border: 3px solid #174580;
+    text-align: center;
+    background: navy;
+    color: red;
+    border-radius: 20px;
+    display: none;
+    position: fixed;
+    
+    
+    
+  }
+
+  #img_mv{
+    height: 40px;
+    width:50px;
+    
+  }
+  #img_vm{
+    height: 40px;
+    width:50px;
+    
+  }
+  .pform{
+    text-align: left;
+    margin-left: 10px;
+    border-radius: 10px;
+  }
+  
+  input{
+    width: 80%;
+    height: 23px;
+    border-radius: 10px;
+    border: 2px solid green;
+    color: teal;
+    font-size: 17px;
+    
+  }
+  
+  button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  textarea{
+    width: 80%;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px solid green;
+    color: teal;
+    font-size: 18px;
+  }
+  #PFF{
+
+font-size: 10px;
+  }
+  
+#mx{
+    background-color:#ffffff00;
+    color: red;
+}
+  
+  #ddd{
+    
+    background-color: #0007;
+      
+  }
+
+.pf{
+    font-size: 12px;
+    
+}
+
+.mai_box_spay{
+    width: 100%;
+}
+.box_spay{
+    width: 47%;
+    background-color: #0022ad55;
+    float: left;
+    margin: 2px;
+    border-radius: 7px;
+}
+
+.box_spay:hover{
+    background-color:#88221188;
+}
+    </style>
+</head>
+<body>
+
+
+    <form id="form1">
+        <p class="pform">Nome: </p>
+        <input type="name" required>
+        <p class="pform">Numero de Telefone: </p>
+        <input type="tel" required>
+        <p class="pf" id="PFF"><b>OPCOES DE PAGAMENTO: </b></p>
+        <img onclick="seleted_mv()" id="img_mv" src="{{url_for('static',filename='/image/mvm1.png')}}" alt="movi" >
+        <img onclick="seleted_vm()" id="img_vm" src="{{url_for('static',filename='/image/vmp1.png')}}" alt="voda" >
+        <div mai_box_spay>
+            <div class="box_spay">
+        <p class="pf">Semanal 50MTS</p><input name="mpay" type="radio"required>
+        </div>
+        <div class="box_spay">
+        <p class="pf">Mensal 150MTS</p><input name="mpay" type="radio"required>
+        </div>
+        </div>
+        <button onclick="paquei()" type="submit">PAGAR SUBSCRICAO</button>
+    </form>
+    <div class="caixinha" >
+        <br>
+    <h1 id="ddd"><mark id="mx">Moz</mark>SFilmes</h1>
+    <p>se ainda nao tens acesso inscreva se nessa plataforma
+        de baixo custo para baixar seus filmes series e animes.
+    </p>
+    <button onclick="open_form()" class="btnr">Inscreva Se</button>
+    </div>
+<br><br><br>
+    <div class="caixa_lista_li" id="caixa_8">
+
+        <p class="text_lista_li" >Filmes!</p>
+        <span><img class="img_lista_li" src="/static/filmes/triplo9.jpg"/></span>
+        <span><img onclick="open_8()" id="img_baisim8" class="img_lista_li_drop" src="/static/image/bai.png"/></span>
+
+    </div>
+    <div class="caixa_drop_li" id="drop_8">
+       {{filmesVal}}
+       
+    </div>
+
+    <div class="caixa_lista_li" id="caixa_9">
+
+        <p class="text_lista_li" >Series</p>
+        <span><img class="img_lista_li" src="/static/series/24horas.jpg"/></span>
+        <span><img onclick="open_9()" id="img_baisim9" class="img_lista_li_drop" src="/static/image/bai.png"/></span>
+    </div>
+    <div class="caixa_drop_li" id="drop_9">
+        <div class="discipli">
+            <h2><b>Portugues</b></h2>
+            <span><img class="img_lista_li"  src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Ingles</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Frances</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Tecnologia(TICS)</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Desenho</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Fisica</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Quimica</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Historia</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Geografia</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Nocoes de Empriende...</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+    </div>
+    <div class="caixa_lista_li" id="caixa_10" >
+
+        <p class="text_lista_li" >Animes</p>
+        <span><img class="img_lista_li" src="/static/series/oval.jpg"/></span>
+        <span><img onclick="open_10()" id="img_baisim10" class="img_lista_li_drop" src="/static/image/bai.png"/></span>
+    </div>
+    <div class="caixa_drop_li" id="drop_10">
+        <div class="discipli">
+            <h2><b>Agro Pecu...</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/ap10.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Ingles</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/ing10.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Desenho</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/ev10.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Tecnologia(TICS)</b></h2>
+            <span><img class="img_lista_li" src="../image/bg1.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>BIologia</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/bio10.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Fisica</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/fis10.jpg"></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Quimica</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/qui10.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Historia</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/his10.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Geografia</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/geo10.jpg"/></span>
+
+        </div>
+        <div class="discipli">
+            <h2><b>Nocoes de Empriende...</b></h2>
+            <span><img class="img_lista_li" src="../imgpc/emp10.jpg"/></span>
+
+        </div>
+    </div>
+   
+    <script>
+        
+        
+document.getElementById("textoMain").innerHTML ="Caro estudante!, acabou a preocupacao esse biblioteca Online com Livros para os seus estudos, Acabou adescupa de nao ser inteligente!";
+document.getElementById("ch1").innerHTML = "O Futuro E Seu, Naisceste para Brilhar!";
+
+
+function paquei(){
+
+    alert("Espere alguns segundos para o sistema atualizar!");
+}
+
+
+
+
+function open_pop_menu(){
+
+    var menu = document.getElementById("pop_menu");
+    menu.style.display = "block";
+}
+
+function close_pop_menu(){
+
+    var menu = document.getElementById("pop_menu");
+    menu.style.display = "none";
+}
+
+function open_form(){
+
+    var form = document.getElementById("form1");
+    form.style.display = "block";
+}
+
+function open_form_suj(){
+
+    var form = document.getElementById("form2");
+    form.style.display = "block";
+}
+
+function seleted_vm(){
+
+    var vm = document.getElementById("img_vm");
+    var mv = document.getElementById("img_mv");
+    vm.style.border = "solid yellow 5px"
+    mv.style.border = "0px"
+
+}
+
+function seleted_mv(){
+    var vm = document.getElementById("img_vm");
+    var mv = document.getElementById("img_mv");
+    vm.style.border = "0px";
+    mv.style.border = "solid yellow 5px";
+
+}
+
+function open_8(){
+
+    var c8 = document.getElementById("drop_8");
+    var bknn = c8.style.display;
+    var img = document.getElementById("img_baisim8");
+
+    if (bknn == "none"){
+        c8.style.display = "block";
+        img.src = "../image/sim.png";
+        alert("Estudante Siga as Nossas Redes Sociais!");
+        var ca9 = document.getElementById("caixa_9");
+        var ca10 = document.getElementById("caixa_10");
+        ca9.style.display = "none";
+        ca10.style.display = "none";
+
+    }else{
+
+        img.src = "../image/bai.png";
+        c8.style.display = "none";
+        alert("Estudante Siga as Nossas Redes Sociais!");
+        var ca9 = document.getElementById("caixa_9");
+        var ca10 = document.getElementById("caixa_10");
+        ca9.style.display = "block";
+        ca10.style.display = "block";
+
+    }
+    
+    
+}
+function open_9(){
+
+    var c9 = document.getElementById("drop_9");
+    var bknn = c9.style.display;
+    var img = document.getElementById("img_baisim9");
+
+    if (bknn == "none"){
+        c9.style.display = "block";
+        img.src = "../image/sim.png";
+        alert("Estudante Siga as Nossas Redes Sociais!");
+        var ca8 = document.getElementById("caixa_8");
+        var ca10 = document.getElementById("caixa_10");
+        ca8.style.display = "none";
+        ca10.style.display = "none";
+
+    }else{
+
+        c9.style.display = "none";
+        img.src = "../image/bai.png";
+        alert("Estudante Siga as Nossas Redes Sociais!");
+        var ca8 = document.getElementById("caixa_8");
+        var ca10 = document.getElementById("caixa_10");
+        ca8.style.display = "block";
+        ca10.style.display = "block";
+
+    }
+    
+    
+}function open_10(){
+
+    var c10 = document.getElementById("drop_10");
+    var bknn = c10.style.display;
+    var img = document.getElementById("img_baisim10");
+
+    if (bknn == "none"){
+        c10.style.display = "block";
+        img.src = "../image/sim.png";
+        alert("Estudante Siga as Nossas Redes Sociais!");
+        var ca9 = document.getElementById("caixa_9");
+        var ca8 = document.getElementById("caixa_8");
+        ca9.style.display = "none";
+        ca8.style.display = "none";
+
+    }else{
+
+        c10.style.display = "none";
+        img.src = "../image/bai.png";
+        alert("Estudante Siga as Nossas Redes Sociais!");
+        var ca9 = document.getElementById("caixa_9");
+        var ca8 = document.getElementById("caixa_8");
+        ca9.style.display = "block";
+        ca8.style.display = "block";
+
+    }
+    
+    
+}
+        
+        
+    </script>
+    
+</body>
+</html>
